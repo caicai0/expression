@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bvp-mi-rZN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bvp-mi-rZN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -64,11 +65,12 @@
                         <outlet property="tableView" destination="eHg-t5-cG7" id="cJj-9L-aGB"/>
                         <segue destination="qmW-RZ-3oC" kind="push" identifier="INputViewController" id="BJ3-Bp-lTI"/>
                         <segue destination="HXQ-9A-8c6" kind="push" identifier="ExpressShowViewController" id="TvC-dv-TZE"/>
+                        <segue destination="ycl-Df-I0u" kind="push" identifier="ExpressSowViewController" id="nkp-UK-aA8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-8" y="290"/>
+            <point key="canvasLocation" x="-14" y="683"/>
         </scene>
         <!--Express Show View Controller-->
         <scene sceneID="Lr4-RR-PaE">
@@ -135,6 +137,38 @@
             </objects>
             <point key="canvasLocation" x="773" y="29"/>
         </scene>
+        <!--Express Sow View Controller-->
+        <scene sceneID="Hk4-sN-axB">
+            <objects>
+                <viewController id="ycl-Df-I0u" customClass="ExpressSowViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IH2-tg-AzG"/>
+                        <viewControllerLayoutGuide type="bottom" id="NcA-R3-mbQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xo6-Hi-ePl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ims-RW-ugm">
+                                <rect key="frame" x="14" y="550" width="572" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ims-RW-ugm" firstAttribute="leading" secondItem="xo6-Hi-ePl" secondAttribute="leadingMargin" id="0Xs-21-5i0"/>
+                            <constraint firstItem="NcA-R3-mbQ" firstAttribute="top" secondItem="Ims-RW-ugm" secondAttribute="bottom" constant="20" id="GgX-uk-zl3"/>
+                            <constraint firstItem="Ims-RW-ugm" firstAttribute="trailing" secondItem="xo6-Hi-ePl" secondAttribute="trailingMargin" id="Jjw-S3-Oq2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bun-jO-lgI"/>
+                    <connections>
+                        <outlet property="slider" destination="Ims-RW-ugm" id="17d-ll-aSk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ie-1B-KE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776" y="1422"/>
+        </scene>
         <!--Nput View Controller-->
         <scene sceneID="A6a-3m-1pS">
             <objects>
@@ -153,7 +187,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="OEg-nN-7hp"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

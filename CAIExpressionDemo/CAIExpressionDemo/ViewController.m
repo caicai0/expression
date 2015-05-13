@@ -22,10 +22,12 @@
     [super viewDidLoad];
     self.tableView.tableFooterView = [[UIView alloc]init];
     self.datas = @[
-                    @{@"name":@"表情展示, 高度计算",
+                    @{@"name":@"表情展示",
                      @"to":@"ExpressShowViewController"},
                     @{@"name":@"编辑表情",
-                      @"to":@"INputViewController"}
+                      @"to":@"INputViewController"},
+                    @{@"name":@"高度计算",
+                      @"to":@"ExpressSowViewController"}
                    ];
 }
 
