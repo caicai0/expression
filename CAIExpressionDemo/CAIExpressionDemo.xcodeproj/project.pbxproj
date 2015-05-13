@@ -124,9 +124,13 @@
 		4B096E3F1AFC639C0004393C /* name.text in Sources */ = {isa = PBXBuildFile; fileRef = 4B096DD51AFC639C0004393C /* name.text */; };
 		4B096E411AFC67690004393C /* expressions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B096E401AFC67690004393C /* expressions.plist */; };
 		4B096E441AFC7C090004393C /* ExpressShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B096E431AFC7C090004393C /* ExpressShowViewController.m */; };
-		4B096E481AFC92170004393C /* CAIExpressionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B096E471AFC92170004393C /* CAIExpressionView.m */; };
 		4B096E4B1AFC935E0004393C /* CAIExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */; };
 		4B3C781C1B00569E00C6735A /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C781B1B00569E00C6735A /* DrawView.m */; };
+		4B5B56FC1B01AD4200AA1717 /* INputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B56FB1B01AD4200AA1717 /* INputViewController.m */; };
+		4B5B56FF1B01ADA500AA1717 /* ExpressSowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B56FE1B01ADA500AA1717 /* ExpressSowViewController.m */; };
+		4B5B57021B01CADC00AA1717 /* CAIExpressionKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */; };
+		4B5B57051B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */; };
+		4B5B57061B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,12 +281,18 @@
 		4B096E401AFC67690004393C /* expressions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expressions.plist; sourceTree = "<group>"; };
 		4B096E421AFC7C090004393C /* ExpressShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressShowViewController.h; sourceTree = "<group>"; };
 		4B096E431AFC7C090004393C /* ExpressShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressShowViewController.m; sourceTree = "<group>"; };
-		4B096E461AFC92170004393C /* CAIExpressionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIExpressionView.h; sourceTree = "<group>"; };
-		4B096E471AFC92170004393C /* CAIExpressionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionView.m; sourceTree = "<group>"; };
 		4B096E491AFC935E0004393C /* CAIExpressionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIExpressionParser.h; sourceTree = "<group>"; };
 		4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionParser.m; sourceTree = "<group>"; };
 		4B3C781A1B00569E00C6735A /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		4B3C781B1B00569E00C6735A /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		4B5B56FA1B01AD4200AA1717 /* INputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INputViewController.h; sourceTree = "<group>"; };
+		4B5B56FB1B01AD4200AA1717 /* INputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INputViewController.m; sourceTree = "<group>"; };
+		4B5B56FD1B01ADA500AA1717 /* ExpressSowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressSowViewController.h; sourceTree = "<group>"; };
+		4B5B56FE1B01ADA500AA1717 /* ExpressSowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressSowViewController.m; sourceTree = "<group>"; };
+		4B5B57001B01CADC00AA1717 /* CAIExpressionKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIExpressionKeyBoardView.h; sourceTree = "<group>"; };
+		4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionKeyBoardView.m; sourceTree = "<group>"; };
+		4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteEmoticonBtn@2x.png"; sourceTree = "<group>"; };
+		4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteEmoticonBtnHL@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -383,6 +393,8 @@
 		4B096D6B1AFC639C0004393C /* 表情 */ = {
 			isa = PBXGroup;
 			children = (
+				4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */,
+				4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */,
 				4B096E401AFC67690004393C /* expressions.plist */,
 				4B096D6C1AFC639C0004393C /* Expression_100@2x.png */,
 				4B096D6D1AFC639C0004393C /* Expression_101@2x.png */,
@@ -502,12 +514,16 @@
 				4B096D421AFC63700004393C /* ViewController.m */,
 				4B096E421AFC7C090004393C /* ExpressShowViewController.h */,
 				4B096E431AFC7C090004393C /* ExpressShowViewController.m */,
-				4B096E461AFC92170004393C /* CAIExpressionView.h */,
-				4B096E471AFC92170004393C /* CAIExpressionView.m */,
 				4B096E491AFC935E0004393C /* CAIExpressionParser.h */,
 				4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */,
 				4B3C781A1B00569E00C6735A /* DrawView.h */,
 				4B3C781B1B00569E00C6735A /* DrawView.m */,
+				4B5B56FA1B01AD4200AA1717 /* INputViewController.h */,
+				4B5B56FB1B01AD4200AA1717 /* INputViewController.m */,
+				4B5B56FD1B01ADA500AA1717 /* ExpressSowViewController.h */,
+				4B5B56FE1B01ADA500AA1717 /* ExpressSowViewController.m */,
+				4B5B57001B01CADC00AA1717 /* CAIExpressionKeyBoardView.h */,
+				4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -675,10 +691,12 @@
 				4B096E2F1AFC639C0004393C /* Expression_86@2x.png in Resources */,
 				4B096E221AFC639C0004393C /* Expression_74@2x.png in Resources */,
 				4B096DE41AFC639C0004393C /* Expression_18@2x.png in Resources */,
+				4B5B57051B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png in Resources */,
 				4B096E0A1AFC639C0004393C /* Expression_52@2x.png in Resources */,
 				4B096DE01AFC639C0004393C /* Expression_14@2x.png in Resources */,
 				4B096E291AFC639C0004393C /* Expression_80@2x.png in Resources */,
 				4B096DF81AFC639C0004393C /* Expression_36@2x.png in Resources */,
+				4B5B57061B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png in Resources */,
 				4B096E0E1AFC639C0004393C /* Expression_56@2x.png in Resources */,
 				4B096DE31AFC639C0004393C /* Expression_17@2x.png in Resources */,
 				4B096DEE1AFC639C0004393C /* Expression_27@2x.png in Resources */,
@@ -740,12 +758,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B096E441AFC7C090004393C /* ExpressShowViewController.m in Sources */,
+				4B5B57021B01CADC00AA1717 /* CAIExpressionKeyBoardView.m in Sources */,
 				4B096E3F1AFC639C0004393C /* name.text in Sources */,
 				4B096E4B1AFC935E0004393C /* CAIExpressionParser.m in Sources */,
 				4B096D3D1AFC63700004393C /* AppDelegate.m in Sources */,
 				4B096D401AFC63700004393C /* CAIExpressionDemo.xcdatamodeld in Sources */,
+				4B5B56FF1B01ADA500AA1717 /* ExpressSowViewController.m in Sources */,
 				4B096D431AFC63700004393C /* ViewController.m in Sources */,
-				4B096E481AFC92170004393C /* CAIExpressionView.m in Sources */,
+				4B5B56FC1B01AD4200AA1717 /* INputViewController.m in Sources */,
 				4B096D3A1AFC63700004393C /* main.m in Sources */,
 				4B3C781C1B00569E00C6735A /* DrawView.m in Sources */,
 			);

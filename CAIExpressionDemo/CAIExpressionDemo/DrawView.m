@@ -21,6 +21,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+    [super drawRect:rect];
     if (self.attributeString) {
         CGContextRef context = UIGraphicsGetCurrentContext();
         CGContextSetTextMatrix(context, CGAffineTransformIdentity);
@@ -40,7 +41,7 @@
         CFRelease(path);
         CFRelease(framesetter);
     }
-//    [super drawRect:rect];
+    
 }
 
 - (void)drawExpressionsWithContext:(CGContextRef)context frame:(CTFrameRef)frame{
