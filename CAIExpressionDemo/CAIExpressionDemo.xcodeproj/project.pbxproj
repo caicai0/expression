@@ -131,6 +131,8 @@
 		4B5B57021B01CADC00AA1717 /* CAIExpressionKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */; };
 		4B5B57051B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */; };
 		4B5B57061B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */; };
+		4BCF38841B04481500E26F84 /* CAITitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF38831B04481500E26F84 /* CAITitleView.m */; };
+		4BCF38871B04485200E26F84 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF38861B04485200E26F84 /* TitleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,6 +295,10 @@
 		4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionKeyBoardView.m; sourceTree = "<group>"; };
 		4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteEmoticonBtn@2x.png"; sourceTree = "<group>"; };
 		4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteEmoticonBtnHL@2x.png"; sourceTree = "<group>"; };
+		4BCF38821B04481500E26F84 /* CAITitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAITitleView.h; sourceTree = "<group>"; };
+		4BCF38831B04481500E26F84 /* CAITitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAITitleView.m; sourceTree = "<group>"; };
+		4BCF38851B04485200E26F84 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		4BCF38861B04485200E26F84 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -524,6 +530,10 @@
 				4B5B56FE1B01ADA500AA1717 /* ExpressSowViewController.m */,
 				4B5B57001B01CADC00AA1717 /* CAIExpressionKeyBoardView.h */,
 				4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */,
+				4BCF38821B04481500E26F84 /* CAITitleView.h */,
+				4BCF38831B04481500E26F84 /* CAITitleView.m */,
+				4BCF38851B04485200E26F84 /* TitleViewController.h */,
+				4BCF38861B04485200E26F84 /* TitleViewController.m */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -764,6 +774,8 @@
 				4B096D3D1AFC63700004393C /* AppDelegate.m in Sources */,
 				4B096D401AFC63700004393C /* CAIExpressionDemo.xcdatamodeld in Sources */,
 				4B5B56FF1B01ADA500AA1717 /* ExpressSowViewController.m in Sources */,
+				4BCF38841B04481500E26F84 /* CAITitleView.m in Sources */,
+				4BCF38871B04485200E26F84 /* TitleViewController.m in Sources */,
 				4B096D431AFC63700004393C /* ViewController.m in Sources */,
 				4B5B56FC1B01AD4200AA1717 /* INputViewController.m in Sources */,
 				4B096D3A1AFC63700004393C /* main.m in Sources */,
