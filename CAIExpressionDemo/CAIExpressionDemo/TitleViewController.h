@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TitleViewController : UIViewController
+@interface TitleViewController : UIViewController <UIScrollViewDelegate>
 
 @end

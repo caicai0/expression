@@ -126,6 +126,12 @@
 		4B096E441AFC7C090004393C /* ExpressShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B096E431AFC7C090004393C /* ExpressShowViewController.m */; };
 		4B096E4B1AFC935E0004393C /* CAIExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */; };
 		4B3C781C1B00569E00C6735A /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C781B1B00569E00C6735A /* DrawView.m */; };
+		4B491FCD1B04525E00B23EB1 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FCC1B04525E00B23EB1 /* TitleViewController.m */; };
+		4B491FD11B0453B700B23EB1 /* CAITitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FD01B0453B700B23EB1 /* CAITitleBar.m */; };
+		4B491FD41B0473F900B23EB1 /* UIView+showBorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FD31B0473F900B23EB1 /* UIView+showBorder.m */; };
+		4B491FDA1B047E8500B23EB1 /* UIColor+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FD91B047E8500B23EB1 /* UIColor+Overlay.m */; };
+		4B491FE01B05CC5200B23EB1 /* CAIContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FDF1B05CC5200B23EB1 /* CAIContainerView.m */; };
+		4B491FE31B05EC8700B23EB1 /* contentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FE21B05EC8700B23EB1 /* contentViewController.m */; };
 		4B5B56FC1B01AD4200AA1717 /* INputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B56FB1B01AD4200AA1717 /* INputViewController.m */; };
 		4B5B56FF1B01ADA500AA1717 /* ExpressSowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B56FE1B01ADA500AA1717 /* ExpressSowViewController.m */; };
 		4B5B57021B01CADC00AA1717 /* CAIExpressionKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */; };
@@ -285,6 +291,18 @@
 		4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionParser.m; sourceTree = "<group>"; };
 		4B3C781A1B00569E00C6735A /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		4B3C781B1B00569E00C6735A /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
+		4B491FCB1B04525E00B23EB1 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
+		4B491FCC1B04525E00B23EB1 /* TitleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleViewController.m; sourceTree = "<group>"; };
+		4B491FCF1B0453B700B23EB1 /* CAITitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAITitleBar.h; sourceTree = "<group>"; };
+		4B491FD01B0453B700B23EB1 /* CAITitleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAITitleBar.m; sourceTree = "<group>"; };
+		4B491FD21B0473F900B23EB1 /* UIView+showBorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+showBorder.h"; sourceTree = "<group>"; };
+		4B491FD31B0473F900B23EB1 /* UIView+showBorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+showBorder.m"; sourceTree = "<group>"; };
+		4B491FD81B047E8500B23EB1 /* UIColor+Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Overlay.h"; sourceTree = "<group>"; };
+		4B491FD91B047E8500B23EB1 /* UIColor+Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Overlay.m"; sourceTree = "<group>"; };
+		4B491FDE1B05CC5200B23EB1 /* CAIContainerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIContainerView.h; sourceTree = "<group>"; };
+		4B491FDF1B05CC5200B23EB1 /* CAIContainerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIContainerView.m; sourceTree = "<group>"; };
+		4B491FE11B05EC8700B23EB1 /* contentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentViewController.h; sourceTree = "<group>"; };
+		4B491FE21B05EC8700B23EB1 /* contentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentViewController.m; sourceTree = "<group>"; };
 		4B5B56FA1B01AD4200AA1717 /* INputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = INputViewController.h; sourceTree = "<group>"; };
 		4B5B56FB1B01AD4200AA1717 /* INputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = INputViewController.m; sourceTree = "<group>"; };
 		4B5B56FD1B01ADA500AA1717 /* ExpressSowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressSowViewController.h; sourceTree = "<group>"; };
@@ -343,6 +361,10 @@
 		4B096D361AFC63700004393C /* CAIExpressionDemo */ = {
 			isa = PBXGroup;
 			children = (
+				4B491FD81B047E8500B23EB1 /* UIColor+Overlay.h */,
+				4B491FD91B047E8500B23EB1 /* UIColor+Overlay.m */,
+				4B491FD21B0473F900B23EB1 /* UIView+showBorder.h */,
+				4B491FD31B0473F900B23EB1 /* UIView+showBorder.m */,
 				4B096E451AFC83320004393C /* controllers */,
 				4B096D6B1AFC639C0004393C /* 表情 */,
 				4B096D3B1AFC63700004393C /* AppDelegate.h */,
@@ -510,6 +532,7 @@
 		4B096E451AFC83320004393C /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4B491FCE1B04539000B23EB1 /* titleBar */,
 				4B096D411AFC63700004393C /* ViewController.h */,
 				4B096D421AFC63700004393C /* ViewController.m */,
 				4B096E421AFC7C090004393C /* ExpressShowViewController.h */,
@@ -524,8 +547,23 @@
 				4B5B56FE1B01ADA500AA1717 /* ExpressSowViewController.m */,
 				4B5B57001B01CADC00AA1717 /* CAIExpressionKeyBoardView.h */,
 				4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */,
+				4B491FCB1B04525E00B23EB1 /* TitleViewController.h */,
+				4B491FCC1B04525E00B23EB1 /* TitleViewController.m */,
+				4B491FDE1B05CC5200B23EB1 /* CAIContainerView.h */,
+				4B491FDF1B05CC5200B23EB1 /* CAIContainerView.m */,
+				4B491FE11B05EC8700B23EB1 /* contentViewController.h */,
+				4B491FE21B05EC8700B23EB1 /* contentViewController.m */,
 			);
 			name = controllers;
+			sourceTree = "<group>";
+		};
+		4B491FCE1B04539000B23EB1 /* titleBar */ = {
+			isa = PBXGroup;
+			children = (
+				4B491FCF1B0453B700B23EB1 /* CAITitleBar.h */,
+				4B491FD01B0453B700B23EB1 /* CAITitleBar.m */,
+			);
+			name = titleBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -758,13 +796,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B096E441AFC7C090004393C /* ExpressShowViewController.m in Sources */,
+				4B491FCD1B04525E00B23EB1 /* TitleViewController.m in Sources */,
 				4B5B57021B01CADC00AA1717 /* CAIExpressionKeyBoardView.m in Sources */,
+				4B491FD41B0473F900B23EB1 /* UIView+showBorder.m in Sources */,
 				4B096E3F1AFC639C0004393C /* name.text in Sources */,
+				4B491FDA1B047E8500B23EB1 /* UIColor+Overlay.m in Sources */,
 				4B096E4B1AFC935E0004393C /* CAIExpressionParser.m in Sources */,
+				4B491FE31B05EC8700B23EB1 /* contentViewController.m in Sources */,
 				4B096D3D1AFC63700004393C /* AppDelegate.m in Sources */,
+				4B491FE01B05CC5200B23EB1 /* CAIContainerView.m in Sources */,
 				4B096D401AFC63700004393C /* CAIExpressionDemo.xcdatamodeld in Sources */,
 				4B5B56FF1B01ADA500AA1717 /* ExpressSowViewController.m in Sources */,
 				4B096D431AFC63700004393C /* ViewController.m in Sources */,
+				4B491FD11B0453B700B23EB1 /* CAITitleBar.m in Sources */,
 				4B5B56FC1B01AD4200AA1717 /* INputViewController.m in Sources */,
 				4B096D3A1AFC63700004393C /* main.m in Sources */,
 				4B3C781C1B00569E00C6735A /* DrawView.m in Sources */,

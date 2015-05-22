@@ -27,7 +27,9 @@
                     @{@"name":@"编辑表情",
                       @"to":@"INputViewController"},
                     @{@"name":@"高度计算",
-                      @"to":@"ExpressSowViewController"}
+                      @"to":@"ExpressSowViewController"},
+                    @{@"name":@"标题栏",
+                      @"to":@"TitleViewController"}
                    ];
 }
 
