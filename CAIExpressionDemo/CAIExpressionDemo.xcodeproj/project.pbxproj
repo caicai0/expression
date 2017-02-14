@@ -124,7 +124,6 @@
 		4B096E3F1AFC639C0004393C /* name.text in Sources */ = {isa = PBXBuildFile; fileRef = 4B096DD51AFC639C0004393C /* name.text */; };
 		4B096E411AFC67690004393C /* expressions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B096E401AFC67690004393C /* expressions.plist */; };
 		4B096E441AFC7C090004393C /* ExpressShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B096E431AFC7C090004393C /* ExpressShowViewController.m */; };
-		4B096E4B1AFC935E0004393C /* CAIExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */; };
 		4B3C781C1B00569E00C6735A /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3C781B1B00569E00C6735A /* DrawView.m */; };
 		4B491FCD1B04525E00B23EB1 /* TitleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FCC1B04525E00B23EB1 /* TitleViewController.m */; };
 		4B491FD11B0453B700B23EB1 /* CAITitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B491FD01B0453B700B23EB1 /* CAITitleBar.m */; };
@@ -137,6 +136,9 @@
 		4B5B57021B01CADC00AA1717 /* CAIExpressionKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */; };
 		4B5B57051B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */; };
 		4B5B57061B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */; };
+		4B7A97561E5294F0009AAE47 /* CAITextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A97551E5294F0009AAE47 /* CAITextAttachment.m */; };
+		4B7A975C1E52998C009AAE47 /* CAIExpressionParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B7A975B1E52998C009AAE47 /* CAIExpressionParser.m */; };
+		4B7A975D1E529A1D009AAE47 /* name.text in Resources */ = {isa = PBXBuildFile; fileRef = 4B096DD51AFC639C0004393C /* name.text */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,8 +289,6 @@
 		4B096E401AFC67690004393C /* expressions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = expressions.plist; sourceTree = "<group>"; };
 		4B096E421AFC7C090004393C /* ExpressShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressShowViewController.h; sourceTree = "<group>"; };
 		4B096E431AFC7C090004393C /* ExpressShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressShowViewController.m; sourceTree = "<group>"; };
-		4B096E491AFC935E0004393C /* CAIExpressionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIExpressionParser.h; sourceTree = "<group>"; };
-		4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionParser.m; sourceTree = "<group>"; };
 		4B3C781A1B00569E00C6735A /* DrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
 		4B3C781B1B00569E00C6735A /* DrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 		4B491FCB1B04525E00B23EB1 /* TitleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleViewController.h; sourceTree = "<group>"; };
@@ -311,6 +311,10 @@
 		4B5B57011B01CADC00AA1717 /* CAIExpressionKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionKeyBoardView.m; sourceTree = "<group>"; };
 		4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteEmoticonBtn@2x.png"; sourceTree = "<group>"; };
 		4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "DeleteEmoticonBtnHL@2x.png"; sourceTree = "<group>"; };
+		4B7A97541E5294F0009AAE47 /* CAITextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAITextAttachment.h; sourceTree = "<group>"; };
+		4B7A97551E5294F0009AAE47 /* CAITextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAITextAttachment.m; sourceTree = "<group>"; };
+		4B7A975A1E52998C009AAE47 /* CAIExpressionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIExpressionParser.h; sourceTree = "<group>"; };
+		4B7A975B1E52998C009AAE47 /* CAIExpressionParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIExpressionParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -415,6 +419,8 @@
 		4B096D6B1AFC639C0004393C /* 表情 */ = {
 			isa = PBXGroup;
 			children = (
+				4B7A975A1E52998C009AAE47 /* CAIExpressionParser.h */,
+				4B7A975B1E52998C009AAE47 /* CAIExpressionParser.m */,
 				4B5B57031B01ED8300AA1717 /* DeleteEmoticonBtn@2x.png */,
 				4B5B57041B01ED8300AA1717 /* DeleteEmoticonBtnHL@2x.png */,
 				4B096E401AFC67690004393C /* expressions.plist */,
@@ -524,6 +530,8 @@
 				4B096DD31AFC639C0004393C /* Expression_99@2x.png */,
 				4B096DD41AFC639C0004393C /* Expression_9@2x.png */,
 				4B096DD51AFC639C0004393C /* name.text */,
+				4B7A97541E5294F0009AAE47 /* CAITextAttachment.h */,
+				4B7A97551E5294F0009AAE47 /* CAITextAttachment.m */,
 			);
 			name = "表情";
 			path = "../../表情";
@@ -537,8 +545,6 @@
 				4B096D421AFC63700004393C /* ViewController.m */,
 				4B096E421AFC7C090004393C /* ExpressShowViewController.h */,
 				4B096E431AFC7C090004393C /* ExpressShowViewController.m */,
-				4B096E491AFC935E0004393C /* CAIExpressionParser.h */,
-				4B096E4A1AFC935E0004393C /* CAIExpressionParser.m */,
 				4B3C781A1B00569E00C6735A /* DrawView.h */,
 				4B3C781B1B00569E00C6735A /* DrawView.m */,
 				4B5B56FA1B01AD4200AA1717 /* INputViewController.h */,
@@ -627,14 +633,16 @@
 		4B096D2C1AFC63700004393C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = liyufeng;
 				TargetAttributes = {
 					4B096D331AFC63700004393C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3F685LX6UR;
 					};
 					4B096D4F1AFC63710004393C = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 3F685LX6UR;
 						TestTargetID = 4B096D331AFC63700004393C;
 					};
 					4B096D631AFC63890004393C = {
@@ -667,6 +675,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7A975D1E529A1D009AAE47 /* name.text in Resources */,
 				4B096DE51AFC639C0004393C /* Expression_19@2x.png in Resources */,
 				4B096E101AFC639C0004393C /* Expression_58@2x.png in Resources */,
 				4B096DF41AFC639C0004393C /* Expression_32@2x.png in Resources */,
@@ -795,19 +804,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B7A975C1E52998C009AAE47 /* CAIExpressionParser.m in Sources */,
 				4B096E441AFC7C090004393C /* ExpressShowViewController.m in Sources */,
 				4B491FCD1B04525E00B23EB1 /* TitleViewController.m in Sources */,
 				4B5B57021B01CADC00AA1717 /* CAIExpressionKeyBoardView.m in Sources */,
 				4B491FD41B0473F900B23EB1 /* UIView+showBorder.m in Sources */,
 				4B096E3F1AFC639C0004393C /* name.text in Sources */,
 				4B491FDA1B047E8500B23EB1 /* UIColor+Overlay.m in Sources */,
-				4B096E4B1AFC935E0004393C /* CAIExpressionParser.m in Sources */,
 				4B491FE31B05EC8700B23EB1 /* contentViewController.m in Sources */,
 				4B096D3D1AFC63700004393C /* AppDelegate.m in Sources */,
 				4B491FE01B05CC5200B23EB1 /* CAIContainerView.m in Sources */,
 				4B096D401AFC63700004393C /* CAIExpressionDemo.xcdatamodeld in Sources */,
 				4B5B56FF1B01ADA500AA1717 /* ExpressSowViewController.m in Sources */,
 				4B096D431AFC63700004393C /* ViewController.m in Sources */,
+				4B7A97561E5294F0009AAE47 /* CAITextAttachment.m in Sources */,
 				4B491FD11B0453B700B23EB1 /* CAITitleBar.m in Sources */,
 				4B5B56FC1B01AD4200AA1717 /* INputViewController.m in Sources */,
 				4B096D3A1AFC63700004393C /* main.m in Sources */,
@@ -874,14 +884,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -918,8 +931,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -947,9 +962,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3F685LX6UR;
 				INFOPLIST_FILE = CAIExpressionDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appstore.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -958,9 +975,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3F685LX6UR;
 				INFOPLIST_FILE = CAIExpressionDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appstore.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -969,6 +988,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3F685LX6UR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -979,6 +999,7 @@
 				);
 				INFOPLIST_FILE = CAIExpressionDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appstore.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAIExpressionDemo.app/CAIExpressionDemo";
 			};
@@ -988,12 +1009,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3F685LX6UR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = CAIExpressionDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.appstore.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAIExpressionDemo.app/CAIExpressionDemo";
 			};

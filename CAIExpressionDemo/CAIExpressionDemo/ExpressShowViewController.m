@@ -36,7 +36,6 @@
     
     self.mtatString = mtAtString;
     
-    [self.sizeSwitch addTarget:self action:@selector(fontsizeUpdate:) forControlEvents:UIControlEventValueChanged];
     // Do any additional setup after loading the view.
 }
 
@@ -47,19 +46,8 @@
 
 - (void)fontSizeChange:(UISlider *)slider{
     [self.mtatString addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:slider.value] range:NSMakeRange(0, self.mtatString.length)];
-    if(self.sizeSwitch.on){
-        [CAIExpressionParser updateExpressionSizeInAttributeString:self.mtatString];
-    }
     self.fontSize.text = [NSString stringWithFormat:@"fontSize:%f",slider.value];
     self.label.attributedText = self.mtatString;
-}
-
-- (void)fontsizeUpdate:(UISwitch *)sizeSwitch{
-    if (sizeSwitch.on) {
-        [CAIExpressionParser updateExpressionSizeInAttributeString:self.mtatString];
-        self.label.attributedText = self.mtatString;
-        [self.label setNeedsDisplay];
-    }
 }
 
 @end

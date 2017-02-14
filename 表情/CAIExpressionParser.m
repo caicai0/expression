@@ -9,50 +9,13 @@
 #import "CAIExpressionParser.h"
 #import <UIKit/UIKit.h>
 #import <CoreText/CoreText.h>
+#import "CAITextAttachment.h"
 
 @interface CAIExpressionParser ()
 
 @end
 
 @implementation CAIExpressionParser
-
-#pragma mark - C language
-
-void RunDelegateDeallocCallback( void* refCon ){
-}
-
-CGFloat RunDelegateGetAscentCallback( void *refCon ){
-    NSMutableAttributedString * attributedString = (__bridge NSMutableAttributedString *)refCon;
-    NSDictionary * dic = [attributedString attributesAtIndex:0 effectiveRange:NULL];
-    UIFont * font = dic[NSFontAttributeName];
-    CGFloat fontSize = [UIFont systemFontSize];
-    if (font) {
-        fontSize = font.pointSize;
-    }
-    return fontSize;
-}
-
-CGFloat RunDelegateGetDescentCallback(void *refCon){
-    NSMutableAttributedString * attributedString = (__bridge NSMutableAttributedString *)refCon;
-    NSDictionary * dic = [attributedString attributesAtIndex:0 effectiveRange:NULL];
-    UIFont * font = dic[NSFontAttributeName];
-    CGFloat fontSize = [UIFont systemFontSize];
-    if (font) {
-        fontSize = font.pointSize;
-    }
-    return fontSize*0;
-}
-
-CGFloat RunDelegateGetWidthCallback(void *refCon){
-    NSMutableAttributedString * attributedString = (__bridge NSMutableAttributedString *)refCon;
-    NSDictionary * dic = [attributedString attributesAtIndex:0 effectiveRange:NULL];
-    UIFont * font = dic[NSFontAttributeName];
-    CGFloat fontSize = [UIFont systemFontSize];
-    if (font) {
-        fontSize = font.pointSize;
-    }
-    return fontSize*1.2;
-}
 
 #pragma mark - OC
 
@@ -93,11 +56,15 @@ CGFloat RunDelegateGetWidthCallback(void *refCon){
 
 + (NSMutableAttributedString *)attributedString:(NSString *)string
 {
+    if (!string) {
+        return nil;
+    }
+    NSMutableAttributedString * atString = [[NSMutableAttributedString alloc]init];
     NSError * error = nil;
     NSString *regTags = @"\\[[\\w]*\\]";
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regTags options:NSRegularExpressionCaseInsensitive error:&error];
     NSArray *matches = [regex matchesInString:string options:NSMatchingReportProgress range:NSMakeRange(0, [string length])];
-    NSMutableAttributedString * atString = [[NSMutableAttributedString alloc]init];
+
     
     NSInteger index = 0;
     if (matches.count) {//如果有
@@ -105,18 +72,17 @@ CGFloat RunDelegateGetWidthCallback(void *refCon){
             NSTextCheckingResult * match = matches[i];
             if (index <match.range.location) {//加载中间的文字
                 [atString appendAttributedString:[[NSAttributedString alloc]initWithString:[string substringWithRange:NSMakeRange(index, match.range.location-index)]]];
-                index = match.range.location;
             }
             NSString *mathString = [string substringWithRange:match.range];
             NSString *contentString =[mathString substringWithRange:NSMakeRange(1, mathString.length-2)];
             if ([[CAIExpressionParser shareParser].expressionNames containsObject:contentString]) {//是表情
-                [atString appendAttributedString:[self attributedStringWithExpressionName:contentString withDelegateDic:atString]];
+                [atString appendAttributedString:[self attributedStringWithExpressionName:contentString]];
             }else{//不是表情
                 [atString appendAttributedString:[[NSAttributedString alloc]initWithString:mathString]];
             }
             index = match.range.location+match.range.length;
         }
-        if (index<string.length-1) {
+        if (index<string.length) {
             [atString appendAttributedString:[[NSAttributedString alloc]initWithString:[string substringWithRange:NSMakeRange(index,string.length-index)]]];
         }
     }else{
@@ -125,32 +91,13 @@ CGFloat RunDelegateGetWidthCallback(void *refCon){
     return atString;
 }
 
-+ (NSAttributedString *)attributedStringWithExpressionName:(NSString *)name withDelegateDic:(NSMutableAttributedString *)mtAtString{
-    //生成attachment
-    NSTextAttachment *attachment=[[NSTextAttachment alloc]init];
++ (NSAttributedString *)attributedStringWithExpressionName:(NSString *)name{
+    CAITextAttachment *attachment=[[CAITextAttachment alloc]initWithData:nil ofType:nil];
     NSString * imageName = [CAIExpressionParser shareParser].expressionFile[name];
     UIImage *img= [UIImage imageNamed:imageName];
     attachment.image=img;
-    attachment.bounds=CGRectMake(0,-4, 20, 20);
     NSAttributedString *text=[NSAttributedString attributedStringWithAttachment:attachment];
     NSMutableAttributedString *atString = [[NSMutableAttributedString alloc]initWithAttributedString:text];
-    
-    //修改callback
-    CTRunDelegateCallbacks callbacks;
-    callbacks.version       = kCTRunDelegateVersion1;
-    callbacks.getAscent     = RunDelegateGetAscentCallback;
-    callbacks.getDescent    = RunDelegateGetDescentCallback;
-    callbacks.getWidth      = RunDelegateGetWidthCallback;
-    callbacks.dealloc       = RunDelegateDeallocCallback;
-    
-    CTRunDelegateRef delegate = CTRunDelegateCreate(&callbacks, (void*)mtAtString);
-    NSDictionary *attr = [NSDictionary dictionaryWithObjectsAndKeys:(__bridge id)delegate,kCTRunDelegateAttributeName, nil];
-    CFRelease(delegate);
-    [atString addAttributes:attr range:NSMakeRange(0, 1)];
-    
-    //设置标签
-    [atString addAttribute:@"imageName" value:name range:NSMakeRange(0, 1)];
-    
     return atString;
 }
 
@@ -182,7 +129,7 @@ CGFloat RunDelegateGetWidthCallback(void *refCon){
             }
         }
     }
-    if (index <string.length-1) {//加载中间的文字
+    if (index <string.length) {//加载中间的文字
         [mString appendString:[string substringWithRange:NSMakeRange(index, string.length-index)]];
     }
     return mString;
@@ -196,7 +143,26 @@ CGFloat RunDelegateGetWidthCallback(void *refCon){
     return suggestSize;
 }
 
-+ (void)updateExpressionSizeInAttributeString:(NSMutableAttributedString *)mtAtString{
+#pragma mark - 以下是对自定义的图片处理的 仅适用于中文
+
++ (NSAttributedString *)attributedStringWithImage:(UIImage *)image tag:(NSInteger)tag{
+    if (image) {
+        NSTextAttachment *attachment=[[NSTextAttachment alloc]init];
+        attachment.image = image;
+        attachment.bounds= CGRectMake(0, 0, image.size.width, image.size.height);
+        NSAttributedString *text=[NSAttributedString attributedStringWithAttachment:attachment];
+        NSMutableAttributedString *atString = [[NSMutableAttributedString alloc]initWithAttributedString:text];
+        //设置标签
+        [atString addAttribute:@"tag" value:@(tag) range:NSMakeRange(0, 1)];
+        [atString addAttribute:@"image" value:image range:NSMakeRange(0, 1)];
+        return atString;
+    }else{
+        return [[NSAttributedString alloc]initWithString:@""];
+    }
+    
+}
+
++ (void)updateImageSizeInAttributeString:(NSMutableAttributedString *)mtAtString{
     NSString * string = mtAtString.string;
     NSError * error = nil;
     unichar objectReplacementChar = 0xFFFC;
@@ -209,17 +175,66 @@ CGFloat RunDelegateGetWidthCallback(void *refCon){
         NSDictionary * dic = [mtAtString attributesAtIndex:match.range.location effectiveRange:NULL];
         if (dic) {
             NSTextAttachment *attachment = dic[@"NSAttachment"];
-            NSString * expressionName = dic[@"imageName"];
-            if ([[CAIExpressionParser shareParser].expressionNames containsObject:expressionName] && attachment) {
+            UIImage * image = dic[@"image"];
+            if (image) {
                 CGFloat fontSize = [UIFont systemFontSize];
                 UIFont * font = dic[NSFontAttributeName];
                 if (font) {
                     fontSize = font.pointSize;
                 }
-                attachment.bounds = CGRectMake(0, -fontSize*0.2, fontSize*1.2, fontSize*1.2);
+                attachment.bounds = CGRectMake(0, -fontSize*0.2, fontSize*1.2*image.size.width/image.size.height, fontSize*1.2);
             }
         }
     }
+}
+
+#pragma mark - <a> 标签处理
+
++ (NSAttributedString *)attributedStringHandleAWithAttributeString:(NSMutableAttributedString *)mtAtString{
+    NSString * string = mtAtString.string;
+    NSError * error = nil;
+    NSString *regTags = @"<a href=\\\"(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?\\\">[^<]*</a>";
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regTags options:NSRegularExpressionCaseInsensitive error:&error];
+    NSArray *matches = [regex matchesInString:string options:NSMatchingReportProgress range:NSMakeRange(0, [string length])];
+
+    NSMutableAttributedString *atString = [[NSMutableAttributedString alloc]init];
+    NSInteger index = 0;
+    if (matches.count) {//如果有
+        for (NSInteger i=0; i<matches.count; i++) {
+            NSTextCheckingResult * match = matches[i];
+            if (index <match.range.location) {//加载中间的文字
+                NSAttributedString *aString = [mtAtString attributedSubstringFromRange:NSMakeRange(index,match.range.location-index)];
+                [atString appendAttributedString:aString];
+            }
+            NSString *mathString = [string substringWithRange:match.range];
+            NSAttributedString * mathAtString = [mtAtString attributedSubstringFromRange:match.range];
+            
+            NSError * error = nil;
+            NSString *regTags = @"<a href=\\\"(http|ftp|https):\\/\\/[\\w\\-_]+(\\.[\\w\\-_]+)+([\\w\\-\\.,@?^=%&amp;:/~\\+#]*[\\w\\-\\@?^=%&amp;/~\\+#])?\\\">";
+            NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regTags options:NSRegularExpressionCaseInsensitive error:&error];
+            NSArray *matches2 = [regex matchesInString:mathString options:NSMatchingReportProgress range:NSMakeRange(0, [mathString length])];
+            if (matches2 && matches2.count == 1) {
+                NSTextCheckingResult * match = matches2[0];
+                NSString * aString = [mathString substringWithRange:match.range];
+                NSString * aHeader = @"<a href=\"";
+                NSString * href = [aString substringWithRange:NSMakeRange(aHeader.length, match.range.length-aHeader.length-2)];
+                NSAttributedString *aContent = [mathAtString attributedSubstringFromRange:NSMakeRange(match.range.length, mathString.length-match.range.length-4)];
+                NSMutableAttributedString *AContent = [[NSMutableAttributedString alloc]initWithAttributedString:aContent];
+                NSURL * url = [NSURL URLWithString:href];
+                if (url && [url isKindOfClass:[NSURL class]] && AContent.length) {
+                    [AContent addAttribute:NSLinkAttributeName value:url range:NSMakeRange(0, AContent.length)];
+                    [atString appendAttributedString:AContent];
+                }
+            }
+            index = match.range.location+match.range.length;
+        }
+        if (index<string.length) {
+            [atString appendAttributedString:[[NSAttributedString alloc]initWithString:[string substringWithRange:NSMakeRange(index,string.length-index)]]];
+        }
+    }else{
+        [atString appendAttributedString:[[NSAttributedString alloc]initWithString:string]];
+    }
+    return atString;
 }
 
 @end

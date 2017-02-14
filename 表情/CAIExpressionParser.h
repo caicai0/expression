@@ -29,10 +29,18 @@
 // warning 自定义view draw 时使用 label不用使用这个方法
 + (CGSize)fitSizeWithAttributedString:(NSAttributedString *)atString inSize:(CGSize)inSize;
 
-//同步表情与字体大小
-+ (void)updateExpressionSizeInAttributeString:(NSMutableAttributedString *)mtAtString;
-
 //处理生成单个表情的attributedString
-+ (NSAttributedString *)attributedStringWithExpressionName:(NSString *)name withDelegateDic:(NSMutableAttributedString *)mtAtString;
++ (NSAttributedString *)attributedStringWithExpressionName:(NSString *)name;
+
+#pragma mark - 以下是对自定义的图片处理的 仅适用于中文
+
+//任意的图片处理
++ (NSMutableAttributedString *)attributedStringWithImage:(UIImage *)image tag:(NSInteger)tag;
+
+//同步图片与文字的大小
++ (void)updateImageSizeInAttributeString:(NSMutableAttributedString *)mtAtString;
+
+#pragma mark - 处理<a>标签
++ (NSAttributedString *)attributedStringHandleAWithAttributeString:(NSAttributedString *)mtAtString ranges:(NSMutableArray *)ranges;
 
 @end
